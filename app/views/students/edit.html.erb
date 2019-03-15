@@ -1,0 +1,7 @@
+<h1> activate page <%= @student.to_s %> </h1>
+
+<form method="POST" action="/students/<%=@student.id%>">
+  <input type="hidden" name="_method" value="PATCH" />
+
+ <input type="submit" id="Change activation" value="Change activation"  />
+</form>
