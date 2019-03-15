@@ -1,1 +1,3 @@
 <h1><%= @student.to_s %></h1>
+<h2> This student is currently <%=@student.is_active?%>.</h2>
+<h3> To change this, click <%= link_to 'here', activate_student_path(@student) %></h3>
