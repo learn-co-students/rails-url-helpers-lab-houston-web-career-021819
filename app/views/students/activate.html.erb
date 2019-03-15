@@ -1,0 +1,8 @@
+
+<form method='POST' action='/students/<%= @student.id %>/activate_patch'>
+    <input type='hidden' name="_method" value="PATCH" />
+    <h1><%= @student.to_s %></h1>
+    <h2> This student is currently <%=@student.is_active?%>. To change this, click the box below and click "Change Activated Status."</h2>
+      <input type="checkbox" name="student[active]" id="activate_student" value="<%=!@student.active%>">
+        <input type="submit" value="Change Activated Status" />
+</form>
