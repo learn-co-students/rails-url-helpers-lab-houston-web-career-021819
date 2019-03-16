@@ -1,0 +1,19 @@
+<html>
+  <form method = "POST" action = "/students/<%= @student.id%>" >
+    <input type = "hidden" name = "_method" value = "PATCH"/>
+    <div>
+    <label>Name: <%= @student.first_name + @student.last_name %></label>
+    </div>
+ 
+   <div>
+     <% hidden_field_tag 'active' %>
+     <input type="checkbox" name="student[active]"  value = "<%= @student.active%>"/>  Activate
+    </div>
+    
+    <div>
+     <input type="submit"  value = "Update Activation"/>  
+    </div>
+  </form>
+</html>      
+
+ 
