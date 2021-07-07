@@ -1,5 +1,10 @@
 <div>
+  <h1>Student<h1>
+  <ul>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+  <li>
+
+    <div><%= link_to student.to_s, student_path(student) %></div>
+  <li>
   <% end %>
 </div>
